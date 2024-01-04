@@ -13,7 +13,7 @@ const infoCards = [
 
 const NewsCards = ({ articles, activeArticle }) => {
   const classes = useStyles();
-
+console.log(classes.media);
   if (!articles.length) {
     return (
       <Grow in>

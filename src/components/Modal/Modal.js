@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, Divider, Chip, TextField, Button } from '@mui/material';
 import SimpleModal from '@mui/material/Modal'
-import emailjs from 'emailjs-com';
+// import emailjs from '@emailjs/browser';
 
 import useStyles from './styles';
 
@@ -12,8 +12,8 @@ const Modal = ({ isOpen, setIsOpen, showFeedback }) => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('gmail', 'alan_ai', e.target, 'user_dhVImkgxaL27bxQ8pLPQ5')
-      .then((result) => { console.log(result.text); }, (error) => { console.log(error.text); });
+    // emailjs.sendForm('gmail', 'alan_ai', e.target, 'user_dhVImkgxaL27bxQ8pLPQ5')
+    //   .then((result) => { console.log(result.text); }, (error) => { console.log(error.text); });
   };
 
   if (isOpen && showFeedback) {

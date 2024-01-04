@@ -16,8 +16,9 @@ const App = () => {
 
   useEffect(() => {
     alanBtn({
-      key: '2e000e98a85940e8bc34b38a28c0664c',
+      key: 'cd829c2989c4a7cee7cb5234d5eb91552e956eca572e1d8b807a3e2338fdd0dc/stage',
       onCommand: ({ command, articles, number }) => {
+        console.log(articles);
         if (command === 'newHeadlines') {
           setNewsArticles(articles);
           setActiveArticle(-1);
@@ -37,6 +38,8 @@ const App = () => {
           } else {
             alanBtn().playText('Please try that again...');
           }
+        } else if (command === 'openpopup') { 
+            alert("welcome")
         }
       },
     });
@@ -51,7 +54,7 @@ const App = () => {
             <div className={classes.card}><Typography variant="h5" component="h2">Try saying: <br /><br />Go back</Typography></div>
           </div>
         ) : null}
-        <img src="https://alan.app/voice/images/previews/preview.jpg" className={classes.alanLogo} alt="logo" />
+        <img src="https://assets-global.website-files.com/64ec3fc5bb945b48c0a37b1c/64ec859abeec7a9efe7eef25_logo.svg" className={classes.alanLogo} alt="logo" />
       </div>
       <NewsCards articles={newsArticles} activeArticle={activeArticle} />
       <Modal isOpen={isOpen} setIsOpen={setIsOpen} />

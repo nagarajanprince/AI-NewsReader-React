@@ -1,6 +1,6 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { styled } from '@mui/system';
 
-export default makeStyles({
+export default styled({
   media: {
     height: 250,
   },
